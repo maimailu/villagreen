@@ -2203,7 +2203,7 @@ p.sub-text2 {
 	}
 
 	.living-section {
-		height: 110vh;
+		height: 940px;
 	}
 
 
@@ -2432,7 +2432,7 @@ p.sub-text2 {
 	}
 
 	.living-section {
-		height: 80vh;
+		height: 600px;
 	}
 
 	.mrt-box {
@@ -2447,9 +2447,6 @@ p.sub-text2 {
 	}
 
 
-	.living-section {
-		height: 70vh;
-	}
 
 }
 
