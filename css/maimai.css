@@ -871,7 +871,6 @@ h5 {
 
 
 .hr-responsive {
-	height: auto;
 	max-width: 100%;
 	padding: 40px;
 }
@@ -1041,8 +1040,6 @@ img {
 
 
 header {
-	position: relative;
-	overflow: hidden;
 	color: #fff;
 	background-attachment: scroll;
 	background-image: url(../img/header-bg.png);
@@ -1052,17 +1049,12 @@ header {
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
-	/* width: 100%;
+	width: 100%;
 	height: 100vh;
-	max-width: 100%; */
-
-	/* 改用 min-height + dvh 組合 */
-	min-height: 100vh;
-	min-height: 100dvh;
-	/* 現代瀏覽器，修正行動裝置工具栏問題 */
 	max-width: 100%;
 
 }
+
 
 
 .bg01 {
@@ -1077,7 +1069,7 @@ header {
 	width: 100%;
 	height: 100vh;
 
-
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1103,35 +1095,23 @@ header {
 }
 
 
-.bg03-1 {
-
-	background-image: url(../pic/1/bg03-1.jpg);
+.bg03 {
+	background-attachment: scroll;
+	background-image: url(../pic/1/bg03.jpg);
 	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	width: 100%;
-
-}
-
-.bg03-2 {
-
-	background-image: url(../pic/1/bg03-2.jpg);
-	background-size: cover;
-	background-position: bottom;
+	background-position: left bottom;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	width: 100%;
 	height: 100vh;
+
 }
 
 .bg04 {
 	background-attachment: scroll;
-	background-image: url(../pic/plan/bg04.jpg);
+	background-image: url(../pic/1/bg04.jpg);
 	background-size: cover;
 	background-position: right bottom;
 	background-repeat: no-repeat;
@@ -1392,7 +1372,36 @@ section h3.section-subheading {
 }
 
 
+.textmain-left {
+	font-size: 18px;
+	font-weight: 500;
+	text-align: justify;
+	color: #545352;
+	padding-top: 10px;
+	letter-spacing: 2px;
+	padding-right: 10px;
+	width: 60%;
+}
 
+.textmain-right {
+	font-size: 18px;
+	font-weight: 500;
+	text-align: justify;
+	color: #545352;
+	padding-top: 10px;
+	letter-spacing: 2px;
+	padding-right: 10px;
+	width: 60%;
+	margin-left: 20%;
+}
+
+
+
+.box-relative {
+	position: relative;
+	height: 500px;
+
+}
 
 
 
@@ -1553,7 +1562,6 @@ section#contact1 {
 	display: flex;
 	gap: 8px;
 }
-
 
 .ggg {
 	display: flex;
@@ -1720,7 +1728,7 @@ p.sub-text2 {
 /* 主容器 */
 .split-section-right {
 	display: flex;
-	/* min-height: 100vh; */
+	min-height: 100vh;
 	align-items: center;
 	padding: 0 4%;
 	/* 畫面左右邊界的總間隔 */
@@ -1744,9 +1752,9 @@ p.sub-text2 {
 	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	/* 讓文字靠兩側中間一點，可以選justify-content: flex-end; */
-	/* height: 80vh; */
+	justify-content: flex-end;
+	/* 讓文字靠兩側中間一點 */
+	height: 80vh;
 }
 
 .content-side-left {
@@ -1791,10 +1799,11 @@ p.sub-text2 {
 	font-family: 'Noto Sans TC,Noto Serif TC', sans-serif;
 	font-size: 15px;
 	line-height: 2.4;
-	color: #383838;
+	color: #555;
 	letter-spacing: 1px;
 	font-weight: 600;
 }
+
 
 /* 圖片輪播區域 */
 /* 輪播區域：縮小並靠右 */
@@ -1867,88 +1876,6 @@ p.sub-text2 {
 }
 
 
-.photo-item-left {
-	width: 30%;
-	/* align-self: flex-end;
-			margin-top: -300px;
-			margin-left: auto;
-			margin-right: 20px; */
-	position: absolute;
-	top: 10%;
-	right: 15%;
-}
-
-
-/*生活機能 Living Section  */
-
-.living-section {
-	padding: 80px 20px;
-	text-align: center;
-	/* background: #fff; */
-	background-image: url(../pic/living/living-bg.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	width: 100%;
-	height: 100vh;
-}
-
-
-
-.section-subtitle {
-	font-size: 15px;
-	font-family: 'Noto Sans TC,Noto Serif TC', sans-serif;
-	line-height: 2;
-	/* 行高加大，增加呼吸感 */
-	font-weight: 600;
-	color: #383838;
-	margin-bottom: 50px;
-}
-
-.living-gallery {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
-	margin: 0 auto;
-}
-
-.gallery-item {
-	position: relative;
-	aspect-ratio: 1;
-	/* cursor: pointer;
-			transition: transform 0.3s ease; */
-}
-
-/* .gallery-item:hover {
-			transform: scale(1.05);
-		} */
-
-.gallery-item img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	display: block;
-}
-
-.caption {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	/* background: rgba(0, 0, 0, 0.7); */
-	color: white;
-	text-align: right;
-	text-shadow: 2px 2px 4px #000;
-	padding: 10px;
-	margin: 0;
-	font-size: 14px;
-	font-family: 'Noto Sans TC';
-}
-
-
 
 @media screen and (max-width: 1440px) {
 
@@ -1964,7 +1891,6 @@ p.sub-text2 {
 		background-size: cover;
 		-o-background-size: cover;
 		height: 800px;
-		overflow: hidden;
 	}
 
 
@@ -2059,29 +1985,12 @@ p.sub-text2 {
 	}
 
 
-	/* 新案新增 */
-
 	.house-pic {
 		position: absolute;
 		top: 200px;
 		right: 10%;
 		width: 50%;
 		z-index: 2;
-	}
-
-	.photo-item-left {
-		width: 35%;
-		position: absolute;
-		top: 10%;
-		right: 10%;
-	}
-
-	.text-overlay1 {
-		left: 12%;
-	}
-
-	section h2.section-heading1 {
-		font-size: 28px;
 	}
 
 
@@ -2162,78 +2071,11 @@ p.sub-text2 {
 
 	}
 
-
-
-
-	/* 新案新增 */
-
-	.accent-line {
-		margin: 0 auto 15px;
+	/*內容容器限寬文字位置*/
+	.center-center {
+		margin-top: 0px;
 	}
 
-	.description {
-		font-size: 14px;
-		line-height: 1.4;
-		letter-spacing: 1px;
-	}
-
-	.contact_from {
-		margin-top: 10px;
-		width: 100%;
-		max-width: 1100px;
-	}
-
-	.mrt-box {
-
-		margin-bottom: 400px;
-
-	}
-
-	.bg02 {
-		height: 1100px;
-
-	}
-
-
-	.photo-item-left {
-		position: relative;
-		top: auto;
-		right: auto;
-		width: 50%;
-
-	}
-
-	.text-overlay1 {
-		position: relative;
-		left: auto;
-		text-align: center;
-		width: 100%;
-
-	}
-
-	.living-section {
-		height: 940px;
-	}
-
-
-	.section-subtitle {
-		font-size: 13px;
-		margin-bottom: 30px;
-	}
-
-	.living-gallery {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 12px;
-	}
-
-	.gallery-item {
-		aspect-ratio: 1.2;
-	}
-
-	.caption {
-		font-size: 12px;
-		padding: 8px;
-	}
 
 
 }
@@ -2258,30 +2100,28 @@ p.sub-text2 {
 		-moz-background-size: cover;
 		background-size: cover;
 		-o-background-size: cover;
-		width: 100%;
-		height: 100vh;
-		height: 100svh;
-		height: 100dvh;
-		min-height: 0;
-		overflow: hidden;
+		/* height: 850px; */
+		width: 100vw;
+		/* height: 100dvh; */
+		height: 90vh;
 	}
 
 
 	.logo {
 		position: absolute;
-		top: clamp(28px, 6vh, 44px);
+		top: 50px;
 		left: 0;
 		right: 0;
 		margin-left: auto;
 		margin-right: auto;
-		width: 46%;
+		width: 50%;
 		z-index: 2;
 	}
 
 
 	.slogan-pic {
 		position: absolute;
-		top: clamp(180px, 24vh, 240px);
+		top: 280px;
 		left: 0;
 		right: 0;
 		margin-left: auto;
@@ -2293,13 +2133,11 @@ p.sub-text2 {
 
 	.house-pic {
 		position: absolute;
-		top: auto;
-		bottom: 0;
-		left: 50%;
-		right: auto;
-		margin-left: 0;
-		width: min(84%, 380px);
-		transform: translateX(-42%);
+		top: 400px;
+		left: 0;
+		right: 14%;
+		margin-left: auto;
+		width: 80%;
 		z-index: 2;
 	}
 
@@ -2419,49 +2257,15 @@ p.sub-text2 {
 
 	}
 
-	section h2.section-heading1 {
-		font-size: 22px;
-	}
+	.text-wrapper {
 
-
-	/* 新增新案 */
-
-	.title {
-		font-size: 22px;
-		letter-spacing: 2px;
-		text-align: center;
-	}
-
-
-
-	.text-overlay2 {
-		position: relative;
-		top: auto;
-		left: auto;
-		width: 100%;
-		text-align: center;
-		margin-bottom: 20px;
-		padding: 0 20px;
-	}
-
-	.living-section {
-		height: 600px;
-	}
-
-	.mrt-box {
-		margin-bottom: 400px;
-	}
-
-	.photo-item-left {
-		position: relative;
-		top: auto;
-		right: auto;
-		width: 70%;
+		bottom: 30px;
 	}
 
 
 
 }
+
 
 
 @media screen and (max-width: 414px) {
@@ -2470,6 +2274,12 @@ p.sub-text2 {
 	/* 將父層元素 display 設置為 flex */
 	.contact-slogan {
 		display: flex;
+	}
+
+	/* 將子元素 margin 設置為 auto，將子元素水平垂直對齊到中間 */
+	.box {
+		width: 90%;
+		margin: auto;
 	}
 
 
@@ -2487,34 +2297,10 @@ p.sub-text2 {
 		height: auto;
 	}
 
-
 }
 
 
 /*城市區域下拉選單css*/
-@media screen and (max-width: 375px) {
-	header {
-		height: 100svh;
-		height: 100dvh;
-	}
-
-	.logo {
-		top: 24px;
-		width: 44%;
-	}
-
-	.slogan-pic {
-		top: 150px;
-		width: 52%;
-	}
-
-	.house-pic {
-		bottom: 24px;
-		width: 76%;
-		transform: translateX(-40%);
-	}
-}
-
 .city {
 	margin-bottom: 1.5rem !important;
 }
@@ -2596,7 +2382,13 @@ section#contact .form-group {
 
 
 
-
+/*元素置中*/
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2%;
+}
 
 .text-box {
 	position: relative;
