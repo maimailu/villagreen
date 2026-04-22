@@ -2492,6 +2492,29 @@ p.sub-text2 {
 
 
 /*城市區域下拉選單css*/
+@media screen and (max-width: 375px) {
+	header {
+		height: 100svh;
+		height: 100dvh;
+	}
+
+	.logo {
+		top: 24px;
+		width: 44%;
+	}
+
+	.slogan-pic {
+		top: 150px;
+		width: 52%;
+	}
+
+	.house-pic {
+		bottom: 24px;
+		width: 76%;
+		transform: translateX(-40%);
+	}
+}
+
 .city {
 	margin-bottom: 1.5rem !important;
 }
