@@ -1041,6 +1041,8 @@ img {
 
 
 header {
+	position: relative;
+	overflow: hidden;
 	color: #fff;
 	background-attachment: scroll;
 	background-image: url(../img/header-bg.png);
@@ -1060,6 +1062,17 @@ header {
 	/* 現代瀏覽器，修正行動裝置工具栏問題 */
 	max-width: 100%;
 
+}
+
+/* 在 css/maimai.css (line 1043) 這段把 header 加上 position: relative; overflow: hidden;，
+並補了 header > .pic-relative { min-height: inherit; }。這樣 header 用 100vh/100dvh 時，
+裡面那些 position: absolute 的 logo / slogan / house 就不會再往下蓋到下面的 env section。
+
+這次修的是「首屏內容溢出到下一區塊」這種情況，所以你原本說的「滑動後背景才正常」通常也會一起改善。
+這邊我沒有辦法直接開瀏覽器實機確認，如果你刷新後還是有一點點重疊，
+我下一步會建議再把 .house-pic、.slogan-pic 的 top 改成 clamp(...)，讓它在矮視窗下不要超出首屏。 */
+header>.pic-relative {
+	min-height: inherit;
 }
 
 
@@ -1963,6 +1976,7 @@ p.sub-text2 {
 		background-size: cover;
 		-o-background-size: cover;
 		height: 800px;
+		overflow: hidden;
 	}
 
 
@@ -2261,6 +2275,7 @@ p.sub-text2 {
 		min-height: max(100vh, 820px);
 		min-height: max(100dvh, 820px);
 		height: auto;
+		overflow: hidden;
 	}
 
 
