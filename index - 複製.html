@@ -197,9 +197,6 @@
 
 
 
-
-
-
 </head>
 
 <body id="page-top" class="index">
@@ -208,6 +205,7 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG2RFN3Z" height="0" width="0"
 			style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+
 
 	<!--	修復background-attachment:fixed這個屬性-->
 	<div class="background"> </div>
@@ -1748,7 +1746,6 @@
 			const name = formData.get('name');
 			const gender = formData.get('gender');
 			const phone = formData.get('phone');
-			const email = formData.get('email') || "";
 
 
 			// 檢查必填
@@ -1818,9 +1815,7 @@
 				const result = await mailResponse.json();
 
 				if (mailResponse.ok) {
-					pushGtmFormSuccess();
-
-					// --- 顯示成功訊息 ---
+					// --- 成功 ---
 					showMessage(`傳送成功\n
 ────────────\n
 感謝您的預約\n
@@ -1853,16 +1848,6 @@
 				submitBtn.disabled = false;
 				submitBtn.style.opacity = "1";
 				submitBtn.style.cursor = "pointer";
-			}
-
-			function pushGtmFormSuccess() {
-				window.dataLayer = window.dataLayer || [];
-
-				window.dataLayer.push({
-					event: "form_submit_success",
-					event_action: "submit_success",
-
-				});
 			}
 
 			function resetTwZipcode() {
