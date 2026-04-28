@@ -1498,7 +1498,7 @@ section#contact1 {
 /*空拍滑動設定*/
 .scrolling-wrapper,
 .scrolling-wrapper-flexbox {
-	height: 450px;
+	height: 50%;
 	margin-bottom: 0px;
 	width: 100%;
 	-webkit-overflow-scrolling: touch;
