@@ -1859,7 +1859,9 @@
 				window.dataLayer = window.dataLayer || [];
 
 				window.dataLayer.push({
+					//紀錄活動名稱 
 					event: "form_submit_success",
+					//成功才推送事件，這裡的 event_action 可以自訂義，方便你在 GTM 中設定觸發條件
 					event_action: "submit_success",
 
 				});

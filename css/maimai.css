@@ -2251,7 +2251,6 @@ p.sub-text2 {
 		-o-background-size: cover;
 		/* height: 850px; */
 		width: 100vw;
-		/* height: 100dvh; */
 		height: 100vh;
 	}
 
@@ -2432,7 +2431,7 @@ p.sub-text2 {
 	}
 
 	.living-section {
-		height: 600px;
+		height: 620px;
 	}
 
 	.mrt-box {
