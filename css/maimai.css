@@ -2313,7 +2313,8 @@ p.sub-text2 {
 	.map-bg {
 		position: relative;
 		display: flex;
-		max-height: 60%;
+		max-height: 60vh;
+		max-height: 60svh;
 		overflow: hidden;
 		width: auto;
 	}
