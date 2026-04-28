@@ -1,15 +1,9 @@
-html,
-body {
-
-	overscroll-behavior: none;
-
-}
-
 body {
 	overflow-x: hidden;
 	font-family: "Roboto Slab", "Helvetica Neue", "Microsoft JhengHei", Helvetica, Arial, sans-serif;
 	background: white;
 	color: white;
+	overscroll-behavior: none;
 }
 
 .navbar-center {
