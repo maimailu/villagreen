@@ -4,6 +4,8 @@ body {
 	background: white;
 	color: white;
 	overscroll-behavior: none;
+	/* 改善移動端滾動性能 */
+	-webkit-overflow-scrolling: touch;
 }
 
 .navbar-center {
@@ -1045,9 +1047,11 @@ header {
 	background-size: cover;
 	-o-background-size: cover;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	max-width: 100%;
-
+	/* 改善移動端滾動性能 */
+	transform: translateZ(0);
+	will-change: transform;
 }
 
 
@@ -1062,8 +1066,10 @@ header {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	width: 100%;
-	height: 100vh;
-
+	min-height: 100vh;
+	/* 改善移動端滾動性能 */
+	transform: translateZ(0);
+	will-change: transform;
 
 	display: flex;
 	align-items: center;
@@ -1081,7 +1087,10 @@ header {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	/* 改善移動端滾動性能 */
+	transform: translateZ(0);
+	will-change: transform;
 
 	position: relative;
 	display: flex;
@@ -1113,7 +1122,10 @@ header {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	/* 改善移動端滾動性能 */
+	transform: translateZ(0);
+	will-change: transform;
 }
 
 .bg04 {
@@ -1126,7 +1138,10 @@ header {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	/* 改善移動端滾動性能 */
+	transform: translateZ(0);
+	will-change: transform;
 
 }
 
@@ -1880,7 +1895,10 @@ p.sub-text2 {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+	/* 這強制瀏覽器使用GPU硬件加速，改善移動端滾動性能 */
+	transform: translateZ(0);
+	will-change: transform;
 }
 
 
