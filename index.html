@@ -197,9 +197,6 @@
 
 
 
-
-
-
 </head>
 
 <body id="page-top" class="index">
@@ -208,6 +205,7 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PG2RFN3Z" height="0" width="0"
 			style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+
 
 	<!--	修復background-attachment:fixed這個屬性-->
 	<div class="background"> </div>
@@ -396,7 +394,7 @@
 			<p class="section-subtitle">
 				基隆站前商圈、繁華百貨商店鬧區，都在剛剛好的距離，<br>
 				全聯、愛買近在咫尺，採買輕鬆自如，<br>
-				國小優質學域，為成長鋪展更好的起點。
+				深澳國小優質學域，為成長鋪展更好的起點。
 			</p>
 
 		</div>
@@ -405,19 +403,19 @@
 		<div class="living-gallery wow animate__animated animate__fadeInUp">
 			<div class="gallery-item">
 				<img src="pic/living/shopping01-1.jpg" alt="">
-				<p class="caption">國立海洋科技博物館</p>
+				<p class="caption">全聯中心</p>
 			</div>
 			<div class="gallery-item">
 				<img src="pic/living/shopping01-2.jpg" alt="">
-				<p class="caption">深溪路街景</p>
+				<p class="caption">交通示意圖</p>
 			</div>
 			<div class="gallery-item">
 				<img src="pic/living/shopping01-3.jpg" alt="">
-				<p class="caption">深溪路愛買</p>
+				<p class="caption">情景示意圖</p>
 			</div>
 			<div class="gallery-item">
 				<img src="pic/living/shopping01-4.jpg" alt="">
-				<p class="caption">微笑商場愛力士健身房</p>
+				<p class="caption">深澳國小</p>
 			</div>
 		</div>
 	</section>
@@ -529,7 +527,7 @@
 				background-position: bottom;
 				/* 手機版背景對齊左下角 */
 				height: auto;
-				min-height: 100svh;
+				min-height: 100vh;
 				padding: 80px 20px;
 				/* 增加上下間距確保內容不貼邊 */
 			}
@@ -538,7 +536,7 @@
 			.bg04 {
 
 				height: auto;
-				min-height: 100svh;
+				min-height: 100vh;
 				padding: 80px 20px;
 				/* 增加上下間距確保內容不貼邊 */
 			}
@@ -1748,7 +1746,6 @@
 			const name = formData.get('name');
 			const gender = formData.get('gender');
 			const phone = formData.get('phone');
-			const email = formData.get('email') || "";
 
 
 			// 檢查必填
@@ -1762,7 +1759,7 @@
 			//  設定 A: 寄信 API 資料
 			// ==========================================
 			const mailTo =
-				'shijingin2002@yahoo.com.tw';
+				'shijingin2002@yahoo.com.tw,fchic@ad-chic.com';
 			const mailSubject = '【墅語院】網站表單 ';
 			const mailText =
 				`姓名：${name}\n姓別：${gender}\n電話：${phone}\n縣市：${city}\n鄉鎮區：${town}`;
@@ -1818,9 +1815,7 @@
 				const result = await mailResponse.json();
 
 				if (mailResponse.ok) {
-					pushGtmFormSuccess();
-
-					// --- 顯示成功訊息 ---
+					// --- 成功 ---
 					showMessage(`傳送成功\n
 ────────────\n
 感謝您的預約\n
@@ -1853,18 +1848,6 @@
 				submitBtn.disabled = false;
 				submitBtn.style.opacity = "1";
 				submitBtn.style.cursor = "pointer";
-			}
-
-			function pushGtmFormSuccess() {
-				window.dataLayer = window.dataLayer || [];
-
-				window.dataLayer.push({
-					//紀錄活動名稱 
-					event: "form_submit_success",
-					//成功才推送事件，這裡的 event_action 可以自訂義，方便你在 GTM 中設定觸發條件
-					event_action: "submit_success",
-
-				});
 			}
 
 			function resetTwZipcode() {
