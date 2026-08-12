@@ -1318,6 +1318,8 @@
 			margin: 0 auto;
 			display: flex;
 			gap: 60px;
+			flex-wrap: wrap;
+			/* allow items to wrap so contact-map can sit on its own row */
 			align-items: flex-start;
 		}
 
@@ -1344,6 +1346,23 @@
 
 		.contact-form-content {
 			width: 100%;
+		}
+
+
+		/* 連絡我們的簡易地圖 */
+		.contact-map {
+			flex-basis: 100%;
+			display: flex;
+			justify-content: center;
+			margin-top: 24px;
+		}
+
+		.contact-map img {
+			max-width: 800px;
+			/* adjust max width as needed */
+			width: 100%;
+			height: auto;
+			display: block;
 		}
 
 		/* RWD - Tablet */
@@ -1386,8 +1405,9 @@
 		}
 	</style>
 
+
 	<!--FAQ section -->
-	<div class=" wow animate__animated animate__fadeInUp">
+	<div class=" wow animate__animated animate__flipInY">
 		<img src="pic/FAQ/FAQ-01.png" alt="FAQ-01"
 			style="width: 100%; max-width: 800px; display: block; margin: 0 auto;">
 		<img src="pic/FAQ/FAQ-02.png" alt="FAQ-02"
@@ -1503,6 +1523,11 @@
 				本文所載各項距離、交通時間、生活機能及機關資訊，係依Gooogle
 				Maps、政府公開資訊或現場實際測量整理、僅供參考；實際距離及所需時間將因交通狀況、行號路線、號誌、尖離購時段及個人駕駛習慣等因素而有所不同，請以實際情況為準。
 			</div>
+		</div>
+		<div class="contact-map wow animate__animated animate__fadeInUp">
+			<img src="pic/contact/map.png" alt="位置簡圖">
+		</div>
+
 	</section>
 
 
