@@ -1,3 +1,10 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: *
 Allow: /
-Sitemap: https://maz6.com
+
+Sitemap: https://villagreen.maz6.com/sitemap.xml
