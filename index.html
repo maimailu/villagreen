@@ -286,9 +286,10 @@
 				<img src="img/logo.png" class="max-w-full" alt="墅語院" />
 			</div>
 
-			<div class="slogan-pic  animate__fadeInLeft" style="animation-duration: 1.2s; ">
-				<img src="img/slogan.png" class="max-w-full" alt="墅語院｜基隆信義區深澳坑路38 45 56坪透天別墅" />
-			</div>
+			<!-- 將原本的 div 改為 h1，並更新 alt 文字 -->
+			<h1 class="slogan-pic animate__fadeInLeft" style="animation-duration: 1.2s;">
+				<img src="img/slogan.png" class="max-w-full" alt="墅語院｜基隆信義區深澳坑路38、45、56坪社區型透天別墅" />
+			</h1>
 
 
 			<div class="house-pic  animate__fadeInRight" style="animation-duration: 1.2s; ">
@@ -336,6 +337,16 @@
 
 
 	<style>
+		/* 配合header裡的h1.slogan-pic，將其樣式設置為繼承父元素的字體大小和正常字重，
+		並移除外邊距和內邊距，以確保標語圖片在頁面上顯示時不會受到額外的間距影響。 */
+		h1.slogan-pic {
+			margin: 0;
+			padding: 0;
+			font-size: inherit;
+			font-weight: normal;
+		}
+
+
 		.photo img {
 			width: 100%;
 			height: 100%;
